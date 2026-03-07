@@ -1,0 +1,5 @@
+# Class 1 — CNN and ResNet50 notebook
+torch>=2.0
+torchvision>=0.15
+matplotlib>=3.5
+numpy>=1.20
