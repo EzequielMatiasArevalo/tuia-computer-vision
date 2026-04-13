@@ -2,7 +2,8 @@
 torch>=2.0
 torchvision>=0.15
 matplotlib>=3.5
-numpy>=1.20
+# PyTorch wheels <2.6 are built against NumPy 1.x; NumPy 2.x breaks torch.tensor.numpy()
+numpy>=1.20,<2
 Pillow>=9.0
 # Optional: for loading local COCO (val2017 + annotations)
 pycocotools>=2.0
@@ -12,3 +13,17 @@ opencv-python>=4.5
 scipy>=1.8
 requests>=2.25
 tqdm
+facenet-pytorch>=2.6.0
+# RetinaFace + 5-point alignment (optional; class 4 ViT notebook)
+insightface>=0.7.3
+onnxruntime>=1.16.0
+retina-face<=0.0.17
+deepface>=0.0.39
+tf-keras>=2.21.0
+chromadb>=1.0.0
+# ChromaDB → OpenTelemetry OTLP gRPC needs google.rpc (error_details_pb2)
+googleapis-common-protos>=1.62.0
+pgvector 
+psycopg2-binary 
+sqlalchemy 
+asyncpg

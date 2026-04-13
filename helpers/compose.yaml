@@ -1,0 +1,27 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: vector_db
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "vector_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    post_start:
+      - command:
+          - psql
+          - -U
+          - user
+          - -d
+          - vector_db
+          - -c
+          - CREATE EXTENSION IF NOT EXISTS vector;
+volumes:
+  postgres_data:

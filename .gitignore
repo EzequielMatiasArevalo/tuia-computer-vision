@@ -1,8 +1,10 @@
 data/*
 .venv*
 media/outputs*
+media/dataset/celebrity-faces/train/*
 *.DS_Store
 *.pt
 *_output
 figures/*
 *__pycache__*
+models/*
