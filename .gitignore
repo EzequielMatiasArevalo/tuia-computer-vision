@@ -8,3 +8,4 @@ media/dataset/celebrity-faces/train/*
 figures/*
 *__pycache__*
 models/*
+*.archive
