@@ -10,3 +10,4 @@ figures/*
 models/*
 *.archive
 .env
+face-recognition/
