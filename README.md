@@ -18,6 +18,8 @@ latent diffusion.
 
 ## Contents
 
+For the full heading-by-heading outline of every notebook, see [INDEX.md](INDEX.md).
+
 | # | Notebook | Topic | Open |
 | --- | --- | --- | --- |
 | 1 | [Class_1_Convolutions_Datasets_CNN_and_Base_Architecture](colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb) | Datasets, annotations, convolutions, CNNs from scratch, ResNet50, Faster R-CNN | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb) |

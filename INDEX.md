@@ -1,0 +1,792 @@
+# Index of notebook sections
+
+A complete, mechanically generated outline of every markdown heading in the notebooks under
+[colab/](colab/), in teaching order. Nesting follows the heading levels used in each notebook;
+`[n]` is the index of the notebook cell the heading lives in, so you can jump straight to it.
+
+This is a derived listing: headings are copied verbatim from the notebooks, so it goes stale as soon
+as a notebook is restructured. For prose descriptions of what each class actually covers, see
+[README.md](README.md).
+
+## Notebooks
+
+- [Class 1 — Datasets and CNNs](#class-1-datasets-and-cnns) · `colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb`
+- [Class 2 — Modern CNN Architectures: From Classic to SOTA](#class-2-modern-cnn-architectures-from-classic-to-sota) · `colab/Class_2_Modern_CNN.ipynb`
+- [Class 2 — lab — Train an image classifier with TIMM (GeoAI)](#class-2-lab-train-an-image-classifier-with-timm-geoai) · `colab/Class_2_Hands_on_lab.ipynb`
+- [Class 3 — A Deep dive into KEY concepts for Computer Vision](#class-3-a-deep-dive-into-key-concepts-for-computer-vision) · `colab/class_3_Key_Concepts_for_Deep_Learning_CV.ipynb`
+- [Class 4 — Transformers for Computer Vision](#class-4-transformers-for-computer-vision) · `colab/class_4_ViT_and_FD.ipynb`
+- [Class 5 — Vision Transformers: DINOv2, DETR and Swin](#class-5-vision-transformers-dinov2-detr-and-swin) · `colab/class_5_Dino_Detr_and_Swin.ipynb`
+- [Class 6 — CLIP, SAM 3 and Grounding DINO](#class-6-clip-sam-3-and-grounding-dino) · `colab/class_6_Clip_and_SAM.ipynb`
+- [Class 7 — CPU vs GPU — YOLO11 vs SAM 3](#class-7-cpu-vs-gpu-yolo11-vs-sam-3) · `colab/class_7_CPU_vs_GPU_YOLOV11_vs_SAM3.ipynb`
+- [Class 8 — Stable Diffusion: Theory & Practice](#class-8-stable-diffusion-theory-practice) · `colab/class8_stable_diffusion_course.ipynb`
+
+---
+
+## Class 1 — Datasets and CNNs
+
+[`colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb`](colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/Class_1_Convolutions_Datasets_CNN_and_Base_Architecture.ipynb) · 121 cells · 81 headings
+
+- Class 1 - Datasets and CNNs `[0]`
+- 📋 Table of Contents `[1]`
+- 0 - Environment Setup `[2]`
+- 1 - Datasets `[5]`
+  - 1.1 Datasets role in computer vision: `[6]`
+  - Types of Datasets `[6]`
+  - 1.2 Challenges and Considerations `[7]`
+  - 1.3 Annotation and labeling types : `[8]`
+    - 1.3.1 Bounding Boxes `[9]`
+    - 1.3.2 Polygonal Segmentation `[11]`
+    - 1.3.3 Segmentation `[13]`
+      - Semantic Segmentation `[14]`
+      - Instance Segmentation `[16]`
+      - Panoptic segmentation `[17]`
+    - 1.3.4 Cuboides 3D `[18]`
+    - 1.3.5 Keypoints and Landmarks `[20]`
+    - 1.3.6 Lines and Splines `[22]`
+  - 1.4 Dataset Example `[24]`
+    - 1.4.1 Download coco `[25]`
+    - 1.4.2 Visualize coco examples `[27]`
+  - 1.5 Public datasets `[29]`
+    - 1.5.1 [ImageNet](https://ieeexplore.ieee.org/document/5206848/): A large-scale hierarchical image database `[30]`
+    - 1.5.2 [Microsoft COCO](https://arxiv.org/pdf/1405.0312v3): Common Objects in Context `[31]`
+    - 1.5.3 [CelebA (CelebFaces Attributes Dataset)](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) `[32]`
+    - 1.5.4 [KITTI](http://www.cvlibs.net/datasets/kitti/) `[33]`
+    - 1.5.5 [nuScenes](https://www.nuscenes.org/) `[34]`
+- 2 - Convolutions `[35]`
+  - 2.1 : Loading test image `[36]`
+  - 2.2 : Display images using matplot `[38]`
+  - 2.3 : Color Space Conversions `[41]`
+  - 2.4 How convolutions work `[44]`
+    - How it works `[44]`
+    - Intuition `[44]`
+    - Example (3×3 kernel) `[44]`
+    - Key concepts `[44]`
+    - Why it matters `[44]`
+    - 2.4.1 Convolution vs. cross-correlation `[45]`
+    - 2.4.2 : Convolution and Filtering `[47]`
+  - 2.5 : Custom 2D Convolution `[50]`
+- 3 - Convolutional Neural Networks (CNN) `[53]`
+  - 3.1 CNN structure `[54]`
+    - 3.1.1. Feature Extraction (Backbone / Encoder) `[55]`
+    - 3.1.2. Feature Aggregation / Representation Learning (Neck) `[56]`
+    - 3.1.3 Task-Specific Prediction (Head / Decoder) `[57]`
+    - Summary `[57]`
+  - 3.2 Setup and imports `[58]`
+  - 3.3 Building a Convolutional Neural Network `[60]`
+    - 3.3.1 The activation function `[62]`
+    - 3.3.2 Capturing activations with hooks `[63]`
+    - 3.3.3 Load a sample image (COCO dataset) `[65]`
+  - 3.4 Normalize dataset `[67]`
+    - 3.4.1 What is Normalization? `[68]`
+    - 3.4.2 Why Normalize? `[69]`
+    - 3.4.3 What Does std Do Specifically? `[70]`
+    - 3.4.4 Display images `[72]`
+  - 3.5 Executing Our Own CNN `[74]`
+    - 3.5.1 Visualizing the feature maps after each layer `[76]`
+  - 3.6 Building full CNN Detector(Backbone + Neck + Head) `[78]`
+    - 3.6.1 Re-defining a new Backbone `[79]`
+    - 3.6.2 Defining the Custom Neck `[81]`
+    - 3.6.3 Defining the classification head `[83]`
+    - 3.6.4 Anchors, box offsets and NMS `[85]`
+    - 3.6.5 Defining the detection head `[86]`
+    - 3.6.6 Assemble the full detector `[88]`
+    - 3.6.7 Using the detector `[90]`
+- 4 - ResNet50: residual networks and why they work `[92]`
+  - [Deep Residual Learning for Image Recognition Paper](https://arxiv.org/abs/1512.03385) `[92]`
+  - 4.1 The degradation problem `[93]`
+  - 4.2 Skip connections (residual connections) `[94]`
+  - 4.3 ResNet50 architecture in short `[95]`
+  - 4.4 Bottleneck block `[96]`
+  - 4.5 Using pre-trained ResNet50 with ImageNet Dataset `[98]`
+  - 4.6 ResNet50 layer overview `[100]`
+  - 4.7 Visualizing pre-trained kernels vs custom kernels `[102]`
+- 5 - Faster R-CNN and CocoDataset with BBoxes `[105]`
+  - 5.1 Loading the pre-trained Faster R-CNN `[107]`
+  - 5.2 Transform coco coordinates from x,y,w,h to xy,xy `[109]`
+  - 5.3 Draw BBoxes `[111]`
+  - 5.4 How good is this? — IoU, precision/recall and mAP `[116]`
+    - 5.4.1 Reading the numbers `[119]`
+- 6 - References `[120]`
+
+---
+
+## Class 2 — Modern CNN Architectures: From Classic to SOTA
+
+[`colab/Class_2_Modern_CNN.ipynb`](colab/Class_2_Modern_CNN.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/Class_2_Modern_CNN.ipynb) · 89 cells · 96 headings
+
+- Class 2 - Modern CNN Architectures: From Classic to SOTA `[0]`
+- Table of Contents `[1]`
+- ⚙️ 0. Environment Setup `[2]`
+- 1. Key concepts in SOTA CNN architectures `[6]`
+  - 1.1 *Internal Covariate Shift* `[8]`
+    - *The intuition* `[8]`
+    - *Why it's a problem* `[8]`
+    - ⚠️ Careful: this is the *historical* motivation, not the current explanation `[8]`
+  - 1.2 - Normalization Layers `[10]`
+    - 1.2.1 Batch Normalization `[11]`
+    - 1.2.2 Layer Normalization `[13]`
+    - 1.2.3 Group Normalization `[15]`
+      - Motivation (from the paper) `[15]`
+      - How it differs from BN and Layer Norm `[15]`
+      - Practical notes `[15]`
+      - Illustration (grouped channels per normalization region) `[15]`
+    - 1.2.4 Summary of Normalization Layers `[16]`
+  - 1.3 Depthwise + Pointwise convolutions `[18]`
+    - Standard Convolution (baseline) `[18]`
+    - Depthwise Convolution `[18]`
+    - How it works (step-by-step) `[18]`
+    - Depthwise Separable Convolution `[18]`
+    - Why it matters `[18]`
+    - Advantages `[18]`
+    - Trade-off `[18]`
+    - Intuition (simple analogy) `[18]`
+    - Summary `[18]`
+  - 1.4 Activation Functions `[20]`
+    - Why the field moved off ReLU `[20]`
+    - The design point that matters for section 2 `[20]`
+    - In PyTorch `[20]`
+- 2. Top Performing CNN Architectures `[21]`
+  - 2.1 ConvNeXt `[22]`
+    - 🔑 Key Innovation: The ConvNeXt Block `[22]`
+  - 2.2 ConvNeXt V2 - Global Response Normalization (GRN) `[23]`
+    - Core idea `[23]`
+    - Why GRN is useful : `[23]`
+    - GRN vs other normalizations `[23]`
+    - 2.2.1 Hands on - Testing a pretrained `convnext_xlarge` on ImageNet-1k. `[27]`
+    - 2.2.2 - Load Dataset `[29]`
+    - 2.2.3 - Loading convnext models `[31]`
+    - 2.2.4 - We denormalize the images to be displayed `[33]`
+  - 2.3 EfficientNetV2 `[39]`
+    - Key Innovations: what actually changed from V1 to V2 `[39]`
+    - Kept from V1 `[39]`
+  - 2.4 NFNet — Normalizer-Free Networks `[43]`
+    - Why remove BatchNorm at all `[43]`
+    - The three replacements `[43]`
+    - Practical notes `[43]`
+  - 2.5 ResNeXt `[44]`
+    - 2.5.1  Wide Residual Networks `[45]`
+      - The Three Axes of Scaling (He et al.): `[45]`
+    - 2.5.2 Grouped Convolutions `[47]`
+- 3. SOTA Object Detection & Segmentation `[50]`
+  - 3.1 Detection metrics: IoU, Precision/Recall, AP and mAP `[51]`
+    - 3.1.1 IoU — Intersection over Union `[51]`
+    - 3.1.2 From IoU to Precision and Recall `[51]`
+    - 3.1.3 AP — Average Precision `[51]`
+    - 3.1.4 mAP — and the thing everybody gets wrong `[51]`
+    - 3.1.5 Computing it yourself `[51]`
+  - 3.2 Faster R-CNN `[52]`
+    - In PyTorch `[53]`
+    - 3.2.1 Region Proposal Network (RPN) `[55]`
+    - *Anchors Boxes* `[55]`
+    - Two heads on top of the RPN `[55]`
+    - *Training signal* `[55]`
+    - *NMS ( Non-Maximum Suppression ) to filter proposals* `[55]`
+    - 3.2.2 RoI Pooling — and why the code actually runs RoIAlign `[56]`
+      - RoIAlign — what `fasterrcnn_resnet50_fpn` really uses `[56]`
+    - 3.2.3 Hands on - Faster R-CNN + COCO-style detection `[57]`
+  - 3.3 YOLO Series (v5 → YOLO26) `[61]`
+    - 3.3.1 Why YOLO “Only Looks Once” `[62]`
+    - 3.3.2 Traditional Object Detection (Before YOLO) `[63]`
+    - 3.3.3 YOLO Approach (Single Pass) `[64]`
+    - 3.3.4 Why “Only Once” Matters `[65]`
+    - 3.3.5 YOLOv8 Architecture: `[66]`
+    - 3.3.6 Summary `[67]`
+  - 3.4 Mask R-CNN `[69]`
+    - The three ideas that make it work `[69]`
+    - In PyTorch `[69]`
+    - Where it sits today `[69]`
+  - 3.5 EfficientDet `[70]`
+    - BiFPN vs Classic FPN: `[70]`
+- 4. Key Trends and Characteristics `[72]`
+  - 4.1 Attention Mechanisms in CNNs `[73]`
+    - SE and CBAM — Channel & Spatial Attention Modules `[73]`
+    - Squeeze-and-Excitation (SE) — Channel Attention `[73]`
+    - CBAM — Convolutional Block Attention Module `[73]`
+    - Intuition in one sentence each `[73]`
+  - 4.2 Efficiency vs Performance: FLOPs Analysis `[75]`
+  - 4.3 1D-CNNs for Temporal Signal Analysis `[77]`
+- 5. Transfer Learning: Fine-Tuning a Pretrained CNN `[79]`
+  - 5.1 Fine-tuning strategies `[80]`
+  - 5.2 Hands on — actually fine-tuning ConvNeXt-Tiny on CIFAR-10 `[83]`
+- 📚 Summary `[87]`
+- 🔗 References `[88]`
+
+---
+
+## Class 2 — lab — Train an image classifier with TIMM (GeoAI)
+
+[`colab/Class_2_Hands_on_lab.ipynb`](colab/Class_2_Hands_on_lab.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/Class_2_Hands_on_lab.ipynb) · 57 cells · 39 headings
+
+- Train an image classifier with TIMM (GeoAI) `[0]`
+  - Index `[0]`
+  - Key ideas `[1]`
+  - Install packages `[2]`
+  - Get the course repository `[4]`
+  - Imports `[6]`
+  - Explore available timm models `[8]`
+  - Download sample data (EuroSAT RGB) `[12]`
+  - Prepare file lists and labels `[14]`
+  - Show class distribution `[16]`
+  - Train / validation / test splits `[18]`
+  - Visualize one example per class `[20]`
+  - Build `RemoteSensingDataset` objects — with the preprocessing the backbone expects `[22]`
+  - Train a ResNet-50 classifier `[24]`
+    - `last.ckpt` is not the best checkpoint `[24]`
+  - Train EfficientNet-B3 `[26]`
+  - Third run: frozen backbone (feature extraction) `[28]`
+  - Load the trained models and run inference `[30]`
+  - Visualize predictions on a batch `[33]`
+    - Predictions of the three runs on the same 20 validation images `[35]`
+  - Quantitative evaluation on the test split `[39]`
+  - First conclusion `[42]`
+  - Out-of-distribution test: high-resolution aerial imagery `[43]`
+    - The colour code changes here — read this before the plots `[47]`
+    - Testing the hypothesis: is it the scale? `[52]`
+  - Evaluating model performance without ground truth `[55]`
+  - What actually went wrong: domain shift, not class imbalance `[55]`
+  - How to fix it `[55]`
+    - 1. Match the resolution (do this first) `[55]`
+    - 2. Data-centric improvements `[55]`
+    - 3. Label quality and sampling `[55]`
+    - 4. Model and training strategy `[55]`
+  - Generating ground truth for the dataset `[55]`
+    - 1. Manual annotation `[55]`
+    - 2. Semi-automatic labeling `[55]`
+    - 3. External data sources `[55]`
+    - 4. Weak supervision `[55]`
+  - Key takeaways `[55]`
+  - Summary `[56]`
+
+---
+
+## Class 3 — A Deep dive into KEY concepts for Computer Vision
+
+[`colab/class_3_Key_Concepts_for_Deep_Learning_CV.ipynb`](colab/class_3_Key_Concepts_for_Deep_Learning_CV.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class_3_Key_Concepts_for_Deep_Learning_CV.ipynb) · 48 cells · 64 headings
+
+- A Deep dive into KEY concepts for Computer Vision `[0]`
+  - Table of Contents `[0]`
+- Section 0:  Install dependencies `[1]`
+- Section 1 - Introduction `[4]`
+  - 🧩 What You’ll Explore `[4]`
+    - 🔹 Anchors `[4]`
+    - 🔹 Detection Head + RoI Align `[4]`
+    - 🔹 NMS `[4]`
+    - 🔹 Evaluation metrics `[4]`
+    - 🔹 Loss Functions `[4]`
+- Section 2 - Anchor Boxes & Region Proposals `[5]`
+  - 2.1 - IoU ( Intersection over Union ) `[6]`
+    - Assignment rules (Faster R-CNN's RPN) `[6]`
+  - 2.2 Anchor Boxes `[7]`
+    - *Anchor Boxes in Object Detection* `[7]`
+    - 2.2.1 *The Problem* `[8]`
+    - 2.2.2 *What is an Anchor Box?* `[9]`
+    - 2.2.3 How It Works `[10]`
+    - 2.2.4 The Math: Encoding & Decoding `[11]`
+    - 2.2.5 Anchor-free detectors `[12]`
+- Section 3 - The Head: Classification & Regression (and RoI Align) `[13]`
+  - 3.1 Example: ResNet50 backbone and FPN neck `[14]`
+    - 3.1.1 The problem `[15]`
+  - 3.2 RoI Pooling `[17]`
+  - 3.3 RoI Align (introduced in Mask R-CNN, 2017) `[18]`
+- Section 4 - NMS ( Non-Maximum Suppression ) `[20]`
+  - Two things the picture above leaves out `[20]`
+  - 4.1 NMS from scratch (synthetic demo) `[21]`
+- Section 5 - Evaluation metrics in computer vision `[23]`
+  - 5.1 Accuracy `[24]`
+  - 5.2 Recall `[25]`
+  - 5.3 Precision `[26]`
+    - 📊 Example `[26]`
+  - 5.4 F1 Score `[27]`
+    - Key Takeaways `[27]`
+  - 5.5 mAP@50 (AP at IoU = 0.50) `[28]`
+  - 5.6 mAP@[50:95] — “mAP50-95” or COCO-style mAP `[29]`
+  - 5.7 One-page mental map `[30]`
+    - Takeaway `[30]`
+- Section 6 — Loss Functions (Multi-task Learning) `[31]`
+  - 6.1 Classification Loss Functions `[32]`
+    - 6.1.1 Cross-Entropy `[33]`
+    - Intuition : `[33]`
+    - Formula : `[33]`
+    - Why the `-log`? `[33]`
+    - 6.1.2 Focal Loss — Fighting class imbalance `[34]`
+    - The problem it solves `[34]`
+    - The Mechanism of Focusing `[34]`
+    - Who actually uses it `[34]`
+    - 6.1.3 Focal Loss vs. Cross-Entropy Loss `[35]`
+  - 6.2 Loss Functions for Bounding Box Detection `[36]`
+    - What is the model actually predicting? `[36]`
+    - 6.2.1 L2 Loss (MSE) `[37]`
+    - 6.2.2 Smooth L1 (Huber Loss) `[38]`
+    - 6.2.3 IoU Loss `[39]`
+    - 6.2.4 GIoU Loss `[40]`
+    - 6.2.5 DIoU Loss `[41]`
+    - 6.2.6 CIoU Loss `[42]`
+    - 6.2.7 Full comparison at a glance `[43]`
+    - 6.2.8 What "scale-invariant" actually means here `[43]`
+    - 6.2.9 How they combine in a real detector `[44]`
+    - The intuition in one sentence per loss `[44]`
+    - 6.2.10 Hands-on: watching IoU loss die `[45]`
+- References `[47]`
+
+---
+
+## Class 4 — Transformers for Computer Vision
+
+[`colab/class_4_ViT_and_FD.ipynb`](colab/class_4_ViT_and_FD.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class_4_ViT_and_FD.ipynb) · 133 cells · 103 headings
+
+- Transformers for Computer Vision `[0]`
+- Table of contents `[1]`
+- 0 - Setup `[2]`
+  - Imports, versions, and device `[2]`
+- 1 - Vector Data Bases `[8]`
+  - 1.1 - What vector databases are `[9]`
+  - 1.2 - Core mechanics `[15]`
+  - 1.3 Typical pipeline `[16]`
+  - 1.4 Where they’re used `[17]`
+  - 1.5 Progress and evolution (why they matter now) `[18]`
+    - 1. From research tools to production infrastructure `[18]`
+    - 2. Hybrid retrieval is becoming default `[18]`
+    - 3. Better indexing and compression `[18]`
+    - 4. Tight integration with LLM stacks `[18]`
+    - 5.) Multimodal embeddings `[18]`
+    - 6. Real-time and streaming updates `[18]`
+    - 7. Security and governance `[18]`
+    - 8. Hardware and acceleration `[18]`
+  - Current limitations `[18]`
+- 2 - Transformer fundamentals (vision-oriented) `[21]`
+  - 2.1 Self-attention — intuition `[22]`
+  - 2.2 Multi-head attention (MHA) `[23]`
+  - 2.3 Positional information `[24]`
+  - 2.4 Encoder / decoder (brief) `[25]`
+  - 2.5 Minimal scaled dot-product attention `[26]`
+- 3 - Vision Transformer (ViT) `[28]`
+  - 3.1 Training considerations & limitations `[29]`
+  - Summary `[29]`
+- 4 - SOTA and representative Transformer-style models `[30]`
+  - 4.1 DETR and variants `[31]`
+  - 4.2 DETR for panoptic segmentation `[32]`
+  - 4.3 Swin Transformer `[33]`
+  - 4.4 DINO / DINOv2 / DINOv3 — self-supervised ViT features `[34]`
+  - 4.5 Hybrid CNN–Transformer `[35]`
+- 5 - Hands-on: load a pretrained ViT and run inference `[36]`
+  - 5.1 ImageNet inference with a pretrained ViT `[37]`
+  - 5.2 Optional: fine-tuning sketch (small dataset) `[39]`
+  - 5.3 Plotting helper for many PIL images `[40]`
+- 6 - Face recognition: detection, alignment, embeddings and retrieval `[42]`
+  - 6.0 Before you build this: bias, consent and the law `[43]`
+    - 6.0.1 Point 1 — Look at your own training set first `[44]`
+    - 6.0.2 Point 2 — The error rates are not the same for everybody `[46]`
+    - 6.0.3 Point 3 — In the EU, some of this is prohibited outright `[46]`
+    - 6.0.4 Point 4 — And locally: Ley 25.326 and the CABA ruling `[46]`
+    - 6.0.5 What this changes in the rest of section 6 `[46]`
+  - 6.1 Download and cache celebrity photos `[47]`
+  - 6.2 Face alignment and recognition (MTCNN + RetinaFace) `[49]`
+  - 6.3 MTCNN `[50]`
+  - 6.4 InsightFace `[52]`
+  - 6.5 Run face detection on all downloaded images `[54]`
+  - 6.6 Plot MTCNN crops `[56]`
+  - 6.7 Visualize RetinaFace boxes and landmarks `[59]`
+  - 6.7.1 Plot RetinaFace without align `[61]`
+  - 6.7.2 Plot RetinaFace-aligned crops `[63]`
+  - 6.8 Preparing Celebraties dataset `[65]`
+  - 6.8.1 Create a post-processing training dataset `[68]`
+  - 6.8.2 Defining normalization pipelines `[70]`
+  - 6.9  Train the new head or load a checkpoint `[72]`
+  - 6.10 Finetuned classifier: top-k on face crops `[74]`
+  - 6.11 Generating and calculating embeddings for inference `[76]`
+  - 6.12 ViT as a feature extractor `[77]`
+  - 6.13 Register identities and faces in Postgres `[79]`
+  - 6.14 Embedding analysis `[81]`
+    - 6.14.1 Identification and verification API `[82]`
+    - 6.14.2 Collecting embeddings for the validation set `[84]`
+    - 6.14.3 Face Embeddings Visualization with PCA and t-SNE `[87]`
+    - 6.14.4 Face Embeddings Visualization with PCA `[90]`
+    - 6.14.5 Face Embeddings Visualization with t-SNE `[91]`
+    - 6.14.6 PCA vs t-SNE `[93]`
+- Expected Visualization Behavior `[93]`
+  - Good Face Embeddings `[93]`
+  - Poor Face Embeddings `[93]`
+- Typical Pipeline `[93]`
+  - 6.14.7 Choosing the threshold: FAR, FRR, ROC and TAR@FAR `[96]`
+  - 6.14.8 Exercise — one threshold, several populations `[100]`
+  - 6.15 Register embeddings in the database `[102]`
+  - 6.16 Query: new photo → detect → identify `[104]`
+  - 6.17 Verification against saved Scarlett embeddings `[106]`
+  - 6.18 Baseline ViT WITHOUT finetuning (ImageNet only) for face retrieval `[108]`
+  - 6.19 Baseline InsightFace `[110]`
+- 7 - Loss Functions for Face Recognition `[112]`
+  - 7.1 Softmax Loss `[113]`
+  - 7.2 Triplets Loss `[114]`
+  - 7.3 ArcFace Loss Function `[115]`
+    - 7.3.1 Motivation `[116]`
+    - 7.3.2 Mathematical Formulation `[117]`
+    - Standard Softmax Loss `[117]`
+    - Normalized Softmax (CosFace baseline) `[117]`
+    - ArcFace Loss `[117]`
+    - 7.3.3. Geometric Intuition `[118]`
+    - 7.3.4 Step-by-Step Derivation `[119]`
+    - 7.3.5 PyTorch Implementation `[120]`
+  - 7.4 Comparison with Related Losses `[122]`
+  - 7.5 Decision Boundary Comparison `[123]`
+  - 7.6 Hyperparameter Guide `[124]`
+    - The two benchmarks these defaults refer to `[124]`
+    - Recommended Defaults `[124]`
+  - 7.7 Training Tips `[125]`
+    - Optimizer `[125]`
+  - 7.8 BatchNorm Before ArcFace `[126]`
+  - 7.9 Inference (No ArcFace Needed) `[127]`
+- 8 - Training MobileFaceNet using ArcFace as example `[129]`
+- 9 - References `[132]`
+
+---
+
+## Class 5 — Vision Transformers: DINOv2, DETR and Swin
+
+[`colab/class_5_Dino_Detr_and_Swin.ipynb`](colab/class_5_Dino_Detr_and_Swin.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class_5_Dino_Detr_and_Swin.ipynb) · 85 cells · 88 headings
+
+- Vision Transformers Notebook: DINOv2, DETR, and Swin `[0]`
+- Table of contents `[1]`
+  - ⚠ Before you run section 1 — read this `[4]`
+- 1 - Common configuration and dataset paths `[5]`
+- 2- DINOv2 (Self-Supervised Learning) `[9]`
+  - 2.1 What is Distillation? `[9]`
+  - 2.2 DINOv2 learns depth implicitly through three mechanisms that arise naturally from self-supervised training: `[9]`
+  - 2.3 Dense Prediction Transformer `[10]`
+  - 2.4 iBOT (Image BERT pre-Training with Online Tokenizer) `[11]`
+    - The two losses in DINOv2 `[11]`
+    - Why this matters for segmentation `[11]`
+  - 2.5 Dataset and Training `[12]`
+- 3- DinoV2 - Hands on `[13]`
+  - 3.1 Loading pre-trained DinoV2 model `[15]`
+  - 3.2 Defining helper functions to pre-process, draw and run PCA over the features `[17]`
+  - 3.3 Loading Imagenet-256 pictures `[19]`
+  - Segment using Dino & PCA `[21]`
+  - Segment using Dino & K-Means `[23]`
+- 4- Fintuning DinoV2 `[25]`
+  - 4.1 Defining helper functions `[26]`
+  - 4.2 Defining Head for our model `[28]`
+  - 4.3 Training and evaluating our model `[30]`
+  - Summary of DINOv2 Fine-Tuning `[32]`
+- 5- DinoV3 `[33]`
+  - 5.0 Data `[34]`
+  - 5.1 Architecture additions in DINOv3 `[35]`
+  - 5.2 Register tokens `[36]`
+  - 5.3 Training objective `[37]`
+  - 5.4 KoLeo regularization `[38]`
+  - 5.5 Gram anchoring `[39]`
+  - 5.6 Positional encoding: RoPE `[40]`
+  - How they work together `[40]`
+  - Teacher model `[40]`
+  - Summary `[40]`
+  - 5.7 DinoV3 - ConvNext feature maps `[41]`
+  - 5.8 DinoV3 - Using Vit backbone `[45]`
+    - What's happening at each step `[47]`
+  - 5.9 DinoV3 Backbone - Architecture Comparison `[48]`
+  - Training `[48]`
+  - Key Practical Differences `[48]`
+  - When to Choose Each `[48]`
+- 6- Swin transformer `[49]`
+  - 6.1 Introduction `[49]`
+- Why Was Swin Transformer Needed? `[49]`
+  - 6.2 Main Ideas Behind Swin Transformer `[50]`
+  - 6.3 High-Level Architecture `[51]`
+  - Normal Window Partition `[51]`
+    - 6.3.1 Step 1 — Patch Partition `[52]`
+    - 6.3.2 Step 2 — Window-Based Self-Attention (W-MSA) `[53]`
+  - Complexity Comparison `[53]`
+    - Global Attention (ViT) `[53]`
+    - Window Attention (Swin) `[53]`
+- Problem With Fixed Windows `[53]`
+  - 6.3.3 Step 3 — Shifted Window Mechanism `[54]`
+  - 6.4 Shifted Window Partition `[55]`
+  - 6.5 Swin Transformer Block `[56]`
+  - 6.6 Hierarchical Representation `[57]`
+  - 6.7 Patch Merging `[58]`
+  - 6.8 Comparison: Swin vs ViT vs CNNs `[59]`
+  - 6.9 Advantages of Swin Transformer `[60]`
+  - 6.10 Disadvantages `[61]`
+  - 6.11 Variants of Swin Transformer `[62]`
+  - 6.12 Applications `[63]`
+  - 6.13 Swin Transformer vs ConvNeXt `[64]`
+    - Where Swin sits today `[64]`
+  - 6.14 Finetunning  example (ImageNet classification) `[65]`
+- 7- DETR for Panoptic Segmentation `[67]`
+  - 7.1 The core idea: detection as **set prediction** `[68]`
+    - The problem with the detectors that came before `[68]`
+    - 1. Object queries — 100 slots `[68]`
+    - 2. The ∅ ("no object") class `[68]`
+    - 3. Bipartite matching — the Hungarian algorithm `[68]`
+    - 4. The set prediction loss `[68]`
+    - What it costs `[68]`
+  - 7.2 Architecture Overview `[69]`
+  - 7.3 How panoptic segmentation is scored: **Panoptic Quality (PQ)** `[70]`
+    - What the two thresholds in the cell above do to it `[70]`
+  - 7.4 What came after DETR `[71]`
+  - 7.5 TODO - Expandir DFINE / DEIM `[72]`
+- 8- Hands on with Pretrained models `[73]`
+  - 8.1 DeTR for panoptic segmentation `[74]`
+  - 8.2 Swin and DinoV2 for classification `[78]`
+    - Summary and Notes ! `[80]`
+  - 8.3 DETR example (COCO object detection) `[81]`
+- References `[84]`
+  - Core papers for this class `[84]`
+  - Supporting techniques `[84]`
+  - Where DETR went next (section 7.4) `[84]`
+
+---
+
+## Class 6 — CLIP, SAM 3 and Grounding DINO
+
+[`colab/class_6_Clip_and_SAM.ipynb`](colab/class_6_Clip_and_SAM.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class_6_Clip_and_SAM.ipynb) · 133 cells · 112 headings
+
+- Table of contents `[0]`
+- 0 - SETUP: Install SAM dependencies (run once) `[1]`
+  - Option A: Using HuggingFace Transformers (recommended for this exercise) `[2]`
+  - Option B: Using Ultralytics (simpler API) `[4]`
+  - Option C: Using official Meta repo `[6]`
+  - Authentication (required — request access at https://huggingface.co/facebook/sam3) `[8]`
+  - HF authentication `[10]`
+- 1 - Segment Anything Model 3 (SAM 3) `[12]`
+  - 1.1 - Introduction `[13]`
+  - 1.2 Supported Prompt Types `[14]`
+    - 1.2.1 Promptable Visual Segmentation (PVS) `[15]`
+    - 1.2.2 Promptable Concept Segmentation (PCS) `[16]`
+    - 1.2.3 Exemplar-Based Segmentation `[17]`
+    - 1.2.4 Open-Vocabulary Segmentation `[18]`
+    - 1.2.5 Zero-Shot Generalization `[19]`
+    - 1.2.6 Multi-Instance Retrieval with Consistent IDs `[20]`
+  - 1.3 Multi-Instance Segmentation `[21]`
+  - 1.4 Pixel-Level Precision `[22]`
+  - 1.5 Video Object Tracking `[23]`
+  - 1.6 Architecture `[26]`
+    - 1.6.1 Perception Encoder `[27]`
+      - 1.6.1.1 Large-Scale Contrastive Pretraining `[28]`
+      - 1.6.1.2 Difference Between PE and CLIP `[29]`
+      - 1.6.1.3 Why Region-Level Embeddings Matter `[30]`
+    - 1.6.2 Shared Vision Encoder `[31]`
+    - 1.6.3 Decoupled Detector and Tracker `[32]`
+    - 1.6.4 Detector `[33]`
+      - 1.6.4.1 Fusion Encoder `[34]`
+      - 1.6.4.2 Concept-Aware Visual Features `[35]`
+- Example `[35]`
+  - 1.6.4.3 DETR Decoder + Object Queries `[36]`
+  - 1.6.4.4 Replacing Sliding Windows and Anchor Boxes `[37]`
+- Advantages of Object Queries `[37]`
+  - 1.6.4.5 Presence Token `[38]`
+  - 1.6.4.6 Mask Head `[39]`
+- Pixel-Level Segmentation Masks `[39]`
+  - 1.6.5 Tracker Architecture `[40]`
+    - 1.6.5.1 Advanced Temporal Tracking Pipeline `[41]`
+    - 1.6.5.2 Core Tracking Strategies `[42]`
+  - Detect-Then-Propagate `[42]`
+- Detect → Then → Propagate `[42]`
+  - 1.6.5.3 Masklet Detection Score (MDS) `[43]`
+- Masklet Detection Score (MDS) `[43]`
+  - 1.6.5.4 Periodic Re-Prompting `[44]`
+- Periodic Re-Prompting `[44]`
+  - 1.6.5.5 Matching Detections to Masklets `[45]`
+  - 1.6.6 Detector vs Tracker `[46]`
+  - 1.6.7 Why Share the Encoder? `[47]`
+  - 1.7 SAM 3 Limitations `[48]`
+  - 1.8 Hands On : Text-Prompted Concept Segmentation `[49]`
+    - 1.8.1 Part 1 : PCS `[50]`
+      - Loading image as example `[52]`
+      - Run text-prompted segmentation `[54]`
+      - Visualization function for masks `[55]`
+    - 1.8.2 Part 2 : Open-Vocabulary Exploration `[58]`
+      - Display Images `[60]`
+    - 1.8.3 Part 3 : Video tracking `[62]`
+      - Convert output to mp4 `[68]`
+- 2 - CLIP — Contrastive Language-Image Pretraining `[71]`
+  - 2.1 - Introduction `[72]`
+  - 2.2 Core Idea `[73]`
+  - 2.3 High-Level Architecture `[74]`
+- CLIP Architecture `[74]`
+  - 2.4 Image Encoder `[75]`
+  - 2.5 Text Encoder `[76]`
+  - 2.6 Shared Embedding Space `[77]`
+- Shared Multimodal Embedding Space `[77]`
+  - 2.7 Contrastive Learning `[78]`
+    - 2.7.1 The contrastive matrix `[79]`
+  - 2.8 Zero-Shot Classification `[80]`
+  - 2.9 Key Components `[81]`
+  - 2.10 Why CLIP Was Revolutionary ? `[82]`
+  - 2.11 Common Use Cases `[83]`
+    - 2.11.1 - Zero-Shot Image Classification `[84]`
+    - 2.11.2 - Image Retrieval `[85]`
+    - 2.11.3 Semantic Search `[86]`
+    - 2.11.4 Content Moderation `[87]`
+    - 2.11.5 - Visual Recommendation Systems `[88]`
+  - 2.12 CLIP vs Traditional CNN Classifiers `[89]`
+  - 2.13 - CLIP Limitations `[90]`
+  - 2.14 CLIP vs Dense Vision Models `[91]`
+    - 2.14.1 CLIP → SigLIP `[92]`
+  - 2.15 Summary `[93]`
+  - 2.16 Hands On : CLIP `[94]`
+    - 2.16.1 Zero-shot image classification `[94]`
+    - 2.16.2 Hands-on: text-to-image retrieval `[97]`
+- 3 - Grounding DINO `[102]`
+  - 3.1 Introduction `[103]`
+  - 3.2 Main Goal `[104]`
+- Open-Vocabulary Object Detection `[104]`
+  - 3.3 Core Capabilities `[105]`
+  - 3.4 High-Level Architecture `[106]`
+  - 3.5 Architecture Overview `[107]`
+    - 3.5.1 - Vision Encoder `[108]`
+    - 3.5.2- Text Encoder `[109]`
+    - 3.5.3 - Feature Enhancer `[110]`
+    - 3.5.4 - Cross-Modal Fusion Module `[111]`
+    - 3.5.5 -  DETR-Style Transformer Decoder `[112]`
+    - 3.5.6 Grounding Mechanism `[113]`
+- "Grounding" `[113]`
+  - 3.5.7 Open-Set Detection `[114]`
+- Open-Set Detection `[114]`
+  - 3.5.8 Zero-Shot Detection `[115]`
+- Zero-Shot Generalization `[115]`
+  - 3.5.9 Training Strategy `[116]`
+  - 3.5.10 Limitations `[117]`
+  - 3.6 Hands On : Example `[118]`
+- 4 - Exercises `[121]`
+- 5 - Answer Section `[123]`
+  - Part 1 `[124]`
+  - Part 2 `[130]`
+- 6 - References `[132]`
+
+---
+
+## Class 7 — CPU vs GPU — YOLO11 vs SAM 3
+
+[`colab/class_7_CPU_vs_GPU_YOLOV11_vs_SAM3.ipynb`](colab/class_7_CPU_vs_GPU_YOLOV11_vs_SAM3.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class_7_CPU_vs_GPU_YOLOV11_vs_SAM3.ipynb) · 69 cells · 69 headings
+
+- Overview `[0]`
+  - Contents `[0]`
+- Setup & Installation `[1]`
+  - Download video `[3]`
+  - Imports `[5]`
+  - Configs `[7]`
+  - Load Video `[9]`
+  - GPU memory helpers `[11]`
+  - Benchmark protocol `[13]`
+    - The scope trap `[13]`
+- 1 - Tracking algorithms (ByteTrack vs BoT-SORT) `[15]`
+  - How both work (shared foundations) `[15]`
+  - 1.1 Hungarian algorithm `[16]`
+    - What is the assignment problem? `[16]`
+    - Core idea `[16]`
+    - How it works (simplified steps) `[16]`
+    - Why it’s useful `[16]`
+  - 1.2 The Kalman filter `[17]`
+  - 1.3 ByteTrack — every detection counts `[18]`
+  - 1.4 BoT-SORT — motion + camera compensation (+ optional appearance) `[19]`
+  - 1.5 Comparison table `[20]`
+    - The other four trackers `[20]`
+  - When to use each `[20]`
+- 2 - YOLO11 — Instance Segmentation + Multi-Object Tracking `[21]`
+  - 2.1 - Core benchmark function `[22]`
+  - 2.2 - Run benchmarks `[25]`
+  - 2.3 - Per-device plots `[28]`
+    - 2.3.1 Inference Time Benchmark `[29]`
+      - Analysis `[31]`
+    - Top graph — CPU `[31]`
+    - Bottom graph — GPU `[31]`
+    - Key takeaways `[31]`
+    - 2.3.2 Detected Masks & Active Tracks per Frame `[32]`
+      - Analysis `[34]`
+    - What each plot shows `[34]`
+    - The most important observation `[34]`
+    - Per-model behavior (reference run) `[34]`
+    - Why does yolo11m detect more than yolo11x? `[34]`
+    - Detected Masks vs. Active Tracks (left vs. right) `[34]`
+    - Scene structure visible in the signal `[34]`
+    - 2.3.3 CPU vs GPU summary bar chart `[36]`
+      - Analysis `[41]`
+    - Mean latency `[41]`
+    - P95 latency and the tail `[41]`
+    - FPS `[41]`
+    - Bottom line (reference run) `[41]`
+    - 2.3.4 Summary `[42]`
+- 3 - SAM 3 `[44]`
+  - Getting the weights — `facebook/sam3` is a **gated** repo `[45]`
+  - 3.1 Core benchmark functions `[48]`
+    - 3.1.1 Defining hooks to get metrics per frame `[49]`
+    - 3.1.2 Inference `[52]`
+  - 3.2 Inference time analysis `[54]`
+    - 3.2.1 GPU — Inference Time per Frame `[56]`
+    - The shaded band is narrow `[56]`
+    - Practical bottom line `[56]`
+    - 3.2.2 Instance Counts per Frame by Class `[58]`
+- 4 - YOLO11 (CPU & GPU) vs SAM 3 — Summary `[59]`
+  - 4.1 The headline number `[62]`
+    - Mean latency comparison `[62]`
+    - P95 latency — SAM 3 has tails too `[62]`
+    - FPS `[62]`
+    - Why GPU doesn't rescue SAM 3 `[62]`
+  - 4.2 Detected Masks & Active Tracks `[66]`
+    - Mean masks per frame `[66]`
+    - Scene structure — same video, same wave `[66]`
+    - The early peak (frames 0–15, up to 62) `[66]`
+- 5 - Conclusions `[67]`
+- 6 - Think & Exercise `[68]`
+
+---
+
+## Class 8 — Stable Diffusion: Theory & Practice
+
+[`colab/class8_stable_diffusion_course.ipynb`](colab/class8_stable_diffusion_course.ipynb) · [Open in Colab](https://colab.research.google.com/github/EzequielMatiasArevalo/tuia-computer-vision/blob/main/colab/class8_stable_diffusion_course.ipynb) · 31 cells · 56 headings
+
+- Stable Diffusion: Theory & Practice `[0]`
+  - Table of Contents `[0]`
+  - 1. Background: From VAEs to Diffusion `[1]`
+    - Why generative models? `[1]`
+    - Variational Autoencoders (Brief Recap) `[1]`
+  - 2. Diffusion Models: The Core Idea `[2]`
+    - 2.1 Forward Process (Noise Schedule) `[2]`
+    - 2.2 Reverse Process (Denoising) `[2]`
+    - 2.3 Training Objective `[2]`
+  - 3. Latent Diffusion Models (LDM) `[4]`
+    - The Scalability Problem `[4]`
+    - The LDM Solution (Rombach et al., 2022) `[4]`
+    - Why does this work? `[4]`
+    - Key Parameters in SD 1.5 `[4]`
+  - 4. The U-Net Denoiser Architecture `[5]`
+    - 4.1 Timestep Embedding `[5]`
+    - 4.2 Architecture Overview `[5]`
+    - 4.3 Cross-Attention for Text Conditioning `[5]`
+  - 5. CLIP Text Conditioning `[7]`
+    - What is CLIP? `[7]`
+    - How Stable Diffusion Uses CLIP `[7]`
+    - Classifier-Free Guidance (CFG) `[7]`
+    - 5.1 Corollary: the negative prompt **is** $\varnothing$ `[7]`
+  - 6. The Sampling Process — DDIM & PNDM `[8]`
+    - DDPM Sampling (Slow) `[8]`
+    - DDIM Sampling (Fast, Deterministic) `[8]`
+    - Sampler Comparison — for ε-prediction models (SD 1.x / 2.x / XL) `[8]`
+    - 6.1 Where the field went next: flow matching / rectified flow `[8]`
+  - 7. Environment Setup `[9]`
+  - 8. Practical 1 — Text-to-Image Generation `[12]`
+  - 9. Practical 2 — Image-to-Image `[15]`
+    - Theory `[15]`
+  - 10. Practical 3 — Inpainting `[17]`
+    - Theory `[17]`
+  - 11. Practical 4 — Prompt Engineering `[19]`
+    - Anatomy of a Good Prompt `[19]`
+    - Token Weighting (**not** available in this pipeline) `[19]`
+    - How to actually weight tokens with `diffusers` `[19]`
+  - 12. Practical 5 — Visualizing the Denoising Process `[21]`
+  - 13. Advanced: LoRA and Fine-tuning Concepts `[23]`
+    - Why Fine-tune? `[23]`
+    - LoRA: Low-Rank Adaptation `[23]`
+    - Fine-tuning Methods `[23]`
+  - 14. Practical 6 — ControlNet: structural conditioning `[26]`
+    - 14.1 The mechanism `[26]`
+    - 14.2 Why zero-initialized convolutions — the same trick as LoRA's **B** `[26]`
+    - 14.3 Practical notes `[26]`
+  - 15. Exercises `[28]`
+    - 🟢 Beginner `[28]`
+    - 🟡 Intermediate `[28]`
+    - 🔴 Advanced `[28]`
+  - 16. What we switched off, and what we borrowed `[29]`
+    - 16.1 `safety_checker=None` — what it actually disables `[29]`
+    - 16.2 Where "by Greg Rutkowski" gets its power `[29]`
+    - 16.3 Saying "this was generated" — C2PA and watermarking `[29]`
+  - 17. References `[30]`
