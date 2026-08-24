@@ -46,24 +46,31 @@ Vale la pena tenerlo a mano antes de dar una clase:
 
 ## Cruce con el cronograma
 
-Correspondencia tentativa entre el cronograma del cuatrimestre y estos cuadernos:
+Correspondencia entre el cronograma de practicas del cuatrimestre y estos cuadernos:
 
-| Semana | Fecha | Tema del cronograma | Practica |
-| --- | --- | --- | --- |
-| 1 | mie 19-ago | Inicio y repaso | `class_0` |
-| 2 | mie 26-ago | Tecnicas clasicas de vision | `class_1a`, `class_1b` |
-| 3 | mie 2-sept | Redes neuronales para vision | `class_1c` |
-| 4 | mie 9-sept | Redes neuronales para vision | `class_2b` |
-| 5 | mie 16-sept | CNNs modernas | `class_2a` |
-| 6 | mie 23-sept | CNNs modernas | `class_4` |
-| 7 | mie 30-sept | Deteccion de objetos y segmentacion | `class_7` |
-| 8 | mie 7-oct | Vision language models (VLMs) — TP Intermedio | `class_6` (TODO) |
-| 9 | mie 14-oct | Modelos generativos I (GANs y VAEs) — TP Intermedio | sin teoria ni practica |
-| 10 | mie 21-oct | Modelos generativos II (Diffusion) — TP Intermedio | `class_8` (TODO) |
-| 12 | mie 4-nov | Vision en video | parcialmente `class_7` |
-| 14 | mie 18-nov | Vision 3D y NeRF — TP Final | sin teoria ni practica |
+| Semana | Fecha | Tema del cronograma | A cargo | Practica |
+| --- | --- | --- | --- | --- |
+| 1 | mie 26-ago | Inicio y repaso | Juli | `class_0` |
+| 2 | mie 2-sept | Tecnicas clasicas de vision | Tino | `class_1a`, `class_1b` |
+| 3 | mie 9-sept | Redes neuronales para vision | Juli | `class_1c` |
+| 4 | mie 16-sept | Redes neuronales para vision | Tino | `class_2b` |
+| 5 | mie 23-sept | CNNs modernas | Juli | `class_2a` |
+| 6 | mie 30-sept | CNNs modernas | Tino | `class_4` |
+| 7 | mie 7-oct | Deteccion de objetos y segmentacion | Juli | `class_7` |
+| 8 | mie 14-oct | Vision language models (VLMs) — TP Intermedio | Tino | `class_6` (TODO) |
+| 9 | mie 21-oct | Modelos generativos I (GANs y VAEs) — TP Intermedio | Juli | sin teoria ni practica |
+| 10 | mie 28-oct | Modelos generativos II (Diffusion) — TP Intermedio | Tino | `class_8` (TODO) |
+| 12 | mie 11-nov | Vision en video | Juli | parcialmente `class_7` |
+| 14 | mie 25-nov | Vision 3D y NeRF — TP Final | Tino | sin teoria ni practica |
 
-Entrega del TP Intermedio: viernes 8, hasta las 23:59. Semanas 11 y 13: receso.
+La fecha de la semana 1 esta fija: el curso arranca una semana mas tarde de lo previsto
+originalmente, y el resto del cronograma corre en bloque detras de ella. Semanas 11 y 13: receso.
+
+Entrega del TP Intermedio en la semana 10: **viernes 8, hasta las 23:59** (tal como figura en el
+cronograma; conviene confirmar la fecha exacta antes de anunciarla).
+
+El contenido de la semana 1 segun el cronograma —representacion digital, espacios de color,
+histogramas, convoluciones y filtros— es exactamente lo que cubre `class_0`.
 
 **Dos temas del cronograma no tienen ni teoria ni practica todavia**: modelos generativos I
 (GANs y VAEs, semana 9) y vision 3D / NeRF (semana 14). No estan como `_TODO.ipynb` porque la
