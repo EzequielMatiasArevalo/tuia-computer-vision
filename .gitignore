@@ -11,3 +11,4 @@ models/*
 *.archive
 .env
 face-recognition/
+.vscode
