@@ -24,7 +24,7 @@ tiene practica. Adentro esta el tema, el link a la teorica correspondiente y el 
 | 2b | [`class_2b_features_similitud_transfer_learning.ipynb`](class_2b_features_similitud_transfer_learning.ipynb) | [Class 2](../colab/Class_2_Modern_CNN.ipynb) | Del clasificador al extractor de features, similitud del coseno, top-k, PCA, fine-tuning de ResNet18 en CIFAR-10 |
 | 3 | [`class_3_key_concepts_TODO.ipynb`](class_3_key_concepts_TODO.ipynb) | [Class 3](../colab/class_3_Key_Concepts_for_Deep_Learning_CV.ipynb) | **TODO** — anchors, RoI Align, NMS, metricas y funciones de perdida |
 | 4 | [`class_4_reconocimiento_facial.ipynb`](class_4_reconocimiento_facial.ipynb) | [Class 4](../colab/class_4_ViT_and_FD.ipynb) | LFW, deteccion con MTCNN, embeddings y t-SNE, verificacion 1:1, identificacion 1:N, pipeline completo |
-| 5 | [`class_5_dino_detr_y_swin_TODO.ipynb`](class_5_dino_detr_y_swin_TODO.ipynb) | [Class 5](../colab/class_5_Dino_Detr_and_Swin.ipynb) | **TODO** — DINOv2/v3, DETR y Swin |
+| 5 | [`class_5_dino_detr_y_swin.ipynb`](class_5_dino_detr_y_swin.ipynb) | [Class 5](../colab/class_5_Dino_Detr_and_Swin.ipynb) | DINOv2 sin etiquetas (PCA, K-Means, matching), cabeza propia y fine-tuning en Flowers-102, registers y DINOv3, ventanas de Swin y fine-tuning, DETR: queries, matching Hungaro y panoptica |
 | 6 | [`class_6_clip_sam_y_grounding_dino_TODO.ipynb`](class_6_clip_sam_y_grounding_dino_TODO.ipynb) | [Class 6](../colab/class_6_Clip_and_SAM.ipynb) | **TODO** — CLIP, SAM 3 y Grounding DINO |
 | 7 | [`class_7_deteccion_y_segmentacion.ipynb`](class_7_deteccion_y_segmentacion.ipynb) | [Class 7](../colab/class_7_CPU_vs_GPU_YOLOV11_vs_SAM3.ipynb) | Segmentacion de instancias con YOLO11-seg, benchmark CPU vs GPU, tracking (ByteTrack / BoT-SORT) y SAM 3 |
 | 8 | [`class_8_stable_diffusion_TODO.ipynb`](class_8_stable_diffusion_TODO.ipynb) | [Class 8](../colab/class8_stable_diffusion_course.ipynb) | **TODO** — Stable Diffusion |
@@ -41,6 +41,10 @@ Vale la pena tenerlo a mano antes de dar una clase:
 - **Clase 4** — la practica cubre **solo la seccion 6** de la teorica (deteccion, embeddings,
   verificacion e identificacion). Quedan sin practica: ViT como extractor de features, la base de
   datos vectorial con pgvector ([`helpers/compose.yaml`](../helpers/compose.yaml)) y ArcFace.
+- **Clase 5** — la practica entrena sobre Oxford Flowers-102 (10 imagenes por clase) en lugar del
+  ImageNet-256 de Kaggle que usa la teorica, y agrega lo que la teorica solo cuenta: el efecto de los
+  *registers* (DINOv2 vs DINOv2-reg), la mascara del *cyclic shift* de Swin y el matching Hungaro a mano.
+  El matching usa *ground truth* aproximado anotado a mano, no las anotaciones oficiales de COCO.
 - **Clase 7** — la practica llega a lo mismo que la teorica pero con otro recorte: agrega SAM 3 con
   *hooks* de metricas por frame.
 
